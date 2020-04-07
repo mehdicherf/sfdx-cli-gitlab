@@ -3,21 +3,13 @@ FROM alpine
 
 #add usefull tools
 RUN apk add --update --no-cache  \
-      openssl \
-      curl \
-      wget \
-      unzip \
       git \
-      rsync \
       findutils \
       bash \
       nodejs \
       nodejs-npm \
       openjdk8-jre \
-      jq \
-      gettext \
-      xmlstarlet \
-      ca-certificates
+      jq
 
 # install sfdx from npm
 RUN npm install sfdx-cli --global
