@@ -7,6 +7,7 @@ RUN apk add --update --no-cache  \
       findutils \
       bash \
       unzip \
+      curl \
       wget \
       nodejs \
       nodejs-npm \
