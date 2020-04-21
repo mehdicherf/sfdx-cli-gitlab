@@ -11,6 +11,7 @@ RUN apk add --update --no-cache  \
       nodejs \
       nodejs-npm \
       openjdk8-jre \
+      perl \
       jq
 
 # install sfdx from npm
