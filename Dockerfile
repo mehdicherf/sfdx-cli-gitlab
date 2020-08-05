@@ -24,6 +24,7 @@ RUN sfdx plugins --core
 # install latest node version (sgd requires node v14)
 RUN npm install n -g
 RUN n latest
+RUN PATH="$PATH"
 
 # install sgd from npm - https://github.com/scolladon/sfdx-git-delta
 RUN npm install sfdx-git-delta@latest --global
