@@ -9,7 +9,7 @@ RUN apk add --update --no-cache  \
       unzip \
       curl \
       wget \
-      nodejs \
+      nodejs-current \
       nodejs-npm \
       openjdk8-jre \
       openssh-client \
@@ -21,11 +21,8 @@ RUN npm install sfdx-cli --global
 RUN sfdx --version
 RUN sfdx plugins --core
 
-# install latest node version (sgd requires node v14)
-RUN npm install n -g
-RUN n latest
-RUN PATH="$PATH"
 
 # install sgd from npm - https://github.com/scolladon/sfdx-git-delta
+RUN node --version
 RUN npm install sfdx-git-delta@latest --global
 RUN sgd --version
