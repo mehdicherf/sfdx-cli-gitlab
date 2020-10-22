@@ -1,5 +1,5 @@
 # small alpine image
-FROM alpine
+FROM node:14.14-alpine
 
 #add usefull tools
 RUN apk add --update --no-cache  \
@@ -9,7 +9,6 @@ RUN apk add --update --no-cache  \
       unzip \
       curl \
       wget \
-      nodejs-current \
       nodejs-npm \
       openjdk8-jre \
       openssh-client \
