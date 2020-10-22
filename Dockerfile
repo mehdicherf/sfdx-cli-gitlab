@@ -1,4 +1,4 @@
-# small alpine image
+# node > 14.6.0 is required for the SFDX-Git-Delta plugin
 FROM node:14.14-alpine
 
 #add usefull tools
@@ -18,13 +18,6 @@ RUN apk add --update --no-cache  \
 # install Salesforce CLI from npm
 RUN npm install sfdx-cli --global
 RUN sfdx --version
-RUN sfdx plugins --core
-
-
-# install sgd from npm - https://github.com/scolladon/sfdx-git-delta
-RUN node --version
-RUN npm install sfdx-git-delta@latest --global
-RUN sgd --version
 
 # install SFDX-Git-Delta plugin - https://github.com/scolladon/sfdx-git-delta
 RUN echo y | sfdx plugins:install sfdx-git-delta
