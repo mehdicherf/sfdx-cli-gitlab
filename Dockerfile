@@ -23,6 +23,6 @@ RUN sfdx --version
 RUN echo y | sfdx plugins:install sfdx-git-delta
 RUN sfdx plugins
 
-# legacy way to install SFDX-Git-Delta, if you still want to use the sgd command (not needed if you use the Salesforce CLI extension)
+# legacy way to install SGD, DO NOT USE ANYMORE (now unsupported)
 RUN npm install sfdx-git-delta@latest --global
 RUN sgd --version
