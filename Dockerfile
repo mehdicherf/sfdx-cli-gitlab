@@ -22,7 +22,3 @@ RUN sfdx --version
 # install SFDX-Git-Delta plugin - https://github.com/scolladon/sfdx-git-delta
 RUN echo y | sfdx plugins:install sfdx-git-delta
 RUN sfdx plugins
-
-# COMPLETELY OPTIONAL: add sgd to path
-RUN ln -s /root/.local/share/sfdx/node_modules/.bin/sgd /usr/local/bin/sgd 
-RUN sgd --version
