@@ -1,5 +1,5 @@
 # node > 14.6.0 is required for the SFDX-Git-Delta plugin
-FROM node:14.14-alpine
+FROM node:lts-alpine
 
 #add usefull tools
 RUN apk add --update --no-cache  \
@@ -9,7 +9,7 @@ RUN apk add --update --no-cache  \
       unzip \
       curl \
       wget \
-      nodejs-npm \
+      npm \
       openjdk8-jre \
       openssh-client \
       perl \
@@ -23,6 +23,6 @@ RUN sfdx --version
 RUN echo y | sfdx plugins:install sfdx-git-delta
 RUN sfdx plugins
 
-# legacy way to install SGD, DO NOT USE ANYMORE (now unsupported)
-RUN npm install sfdx-git-delta@latest --global
+# COMPLETELY OPTIONAL: add sgd to path
+RUN ln -s /root/.local/share/sfdx/node_modules/.bin/sgd /usr/local/bin/sgd 
 RUN sgd --version
