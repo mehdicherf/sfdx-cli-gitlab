@@ -1,5 +1,5 @@
 # sfdx-cli-gitlab
-Lightweight Docker image for CI with Salesforce DX, optimized for use with GitLab CI.
+Lightweight Docker image for CI with Salesforce DX.
 
 ⚠️ Please **do not reference the mehdisfdc/sfdx-cli-gitlab image on your CI/CD pipeline**, since this image may change at any time (which could break your pipeline).
 
