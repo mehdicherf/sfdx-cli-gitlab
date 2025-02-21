@@ -3,6 +3,7 @@ FROM node:lts-alpine
 
 #add usefull tools
 RUN apk add --update --no-cache  \
+      coreutils \
       git \
       findutils \
       bash \
